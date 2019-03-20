@@ -1,6 +1,6 @@
 ## Song Querying by Humming
-#### EECS 352 - Northwestern University
-#### Taught by Bryan Pardo
+EECS 352 - Machine Perception of Music - Northwestern University
+Taught by Bryan Pardo
 
 ### Members
 
