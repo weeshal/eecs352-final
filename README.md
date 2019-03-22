@@ -30,7 +30,7 @@ In this graph for the song American Boy we can see the two waveforms we've creat
 
 Here are some humming samples that worked well, along with their respective chorus
 
-[Call Me Maybe Hum](/Hum/CallMeMaybeHum.wav)
+[Call Me Maybe Hum](https://raw.githubusercontent.com/weeshal/eecs352-final/master/Hum/CallMeMaybeHum.wav)
 
 [Call Me Maybe Chorus](/Chorus/CallMeMaybeChorus.wav)
 
