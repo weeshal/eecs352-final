@@ -21,4 +21,4 @@ We quickly pivoted and tried to do many different things to try and get better r
 ### Image
 ![image](AmericanBoy.png)
 
-In this graph we can see the two waveforms we've created, and one can see how some parts of the hum waveform perfectly match the chorus waveform if it were shifted over a bit. This is taken into consideration in our cosine distance calculation and when a hum has a graph like this, it's usually a sign that it'll have a high score.
+In this graph for the song American Boy we can see the two waveforms we've created, and one can see how some parts of the hum waveform perfectly match the chorus waveform if it were shifted over a bit. This is taken into consideration in our cosine distance calculation and when a hum has a graph like this, it's usually a sign that it'll have a high score.
