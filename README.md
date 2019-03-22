@@ -16,9 +16,37 @@ When it comes to how our code works. For both the humming audio and all of our s
 
 Our process for developing this approach was quite hectic. We began with a completely different approach where we used the Melodia and Vamp python libraries to extract the melody of each song, and get a frequency array of those melodies. Once we had those frequencies, we kept track of the changes in frequencies with three string options: 'u'=up, 's'=same, and 'd'=down. We created arrays of these frequency changes for our hum samples, and for our initial database which contained the .wav files of 10 songs. At first we were getting really good results, with our correct song showing up in the top 3 results for each of the three humming samples we had. However, when we expanded our database to include all 50 songs we wanted, our results deteriorated completely. Now the correct songs weren't even in the top 10 results, which is not good.
 
-We quickly pivoted and tried to do many different things to try and get better results. We tried performing an STFT on our wave file, then using a similar frequency change algorithm but got poor results. We also tried using all of the chromagram information, rather than finding the highest value but that didn't work well. Finally we tried pattern matching waveforms with cross-correlation instead of cosine but also got subpar results. Through this trial and error we got our final approach of extracing the notes from the chromagram, creating waveforms, and calculating the cosine distance. 
+We quickly pivoted and tried to do many different things to try and get better results. The first decision we made was to scale down the project, and focus only on song choruses. Then we tried performing an STFT on our wave file, then using a similar frequency change algorithm but got poor results. We also tried using all of the chromagram information, rather than finding the highest value but that didn't work well. Finally we tried pattern matching waveforms with cross-correlation instead of cosine but also got subpar results. Through this trial and error we got our final approach of extracing the notes from the chromagram, creating waveforms, and calculating the cosine distance. 
+
+### Results
+
 
 ### Image
 ![image](AmericanBoy.png)
 
 In this graph for the song American Boy we can see the two waveforms we've created, and one can see how some parts of the hum waveform perfectly match the chorus waveform if it were shifted over a bit. This is taken into consideration in our cosine distance calculation and when a hum has a graph like this, it's usually a sign that it'll have a high score.
+
+### Audio Samples
+
+Here are some humming samples that worked well, along with their respective chorus
+
+[Call Me Maybe Hum](/Hum/CallMeMaybeHum.wav)
+
+[Call Me Maybe Chorus](/Chorus/CallMeMaybeChorus.wav)
+
+
+[American Boy Hum](/Hum/AmericanBoyHum.wav)
+
+[American Boy Chorus](/Chorus/AmericanBoyChorus.wav)
+
+
+Here are some humming samples that didn't work well, which we mainly found to be hip hop songs
+
+[Congratulations Hum](/Hum/CongratulationsHum.wav)
+
+[Congratulations Chorus](/Chorus/CongratulationsChorus.wav)
+
+
+[Bodak Yellow Hum](/Hum/BodakYellowHum.wav)
+
+[Bodak Yellow Chorus](/Chorus/BodakYellowChorus.wav)
