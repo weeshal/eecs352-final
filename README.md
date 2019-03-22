@@ -1,5 +1,6 @@
 # Song Querying by Humming
 *A system to recognize choruses of songs from a user's hum*  
+  
 *EECS 352 || Machine Perception of Music || Professor Bryan Pardo || Northwestern University*
 
 ### Our Team
