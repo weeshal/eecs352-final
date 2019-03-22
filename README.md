@@ -19,4 +19,6 @@ Our process for developing this approach was quite hectic. We began with a compl
 We quickly pivoted and tried to do many different things to try and get better results. We tried performing an STFT on our wave file, then using a similar frequency change algorithm but got poor results. We also tried using all of the chromagram information, rather than finding the highest value but that didn't work well. Finally we tried pattern matching waveforms with cross-correlation instead of cosine but also got subpar results. Through this trial and error we got our final approach of extracing the notes from the chromagram, creating waveforms, and calculating the cosine distance. 
 
 ### Image
-![alt text] (https://github.com/weeshal/eecs352-final/blob/master/AmericanBoy.png)
+![image] (https://github.com/weeshal/eecs352-final/blob/master/AmericanBoy.png)
+
+In this graph we can see the two waveforms we've created, and one can see how some parts of the hum waveform perfectly match the chorus waveform if it were shifted over a bit. This is taken into consideration in our cosine distance calculation and when a hum has a graph like this, it's usually a sign that it'll have a high score.
