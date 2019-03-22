@@ -19,4 +19,4 @@ Our process for developing this approach was quite hectic. We began with a compl
 We quickly pivoted and tried to do many different things to try and get better results. We tried performing an STFT on our wave file, then using a similar frequency change algorithm but got poor results. We also tried using all of the chromagram information, rather than finding the highest value but that didn't work well. Finally we tried pattern matching waveforms with cross-correlation instead of cosine but also got subpar results. Through this trial and error we got our final approach of extracing the notes from the chromagram, creating waveforms, and calculating the cosine distance. 
 
 ### Image
-![alt text] https://github.com/weeshal/eecs352-final/blob/master/AmericanBoy.png
+![alt text] (https://github.com/weeshal/eecs352-final/blob/master/AmericanBoy.png)
