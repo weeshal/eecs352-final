@@ -5,7 +5,7 @@
 
 ### Our Team
 - Rohaan Advani | rohaanadvani2019@gmail.com
-- Carlos Belardi  carlosbelardi2019@gmail.com
+- Carlos Belardi | carlosbelardi2019@gmail.com
 - Vishal Giridhar | vishalgiridhar2020@u.northwestern.edu
 
 ### Motivation
