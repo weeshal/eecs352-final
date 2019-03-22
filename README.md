@@ -19,7 +19,9 @@ Our process for developing this approach was quite hectic. We began with a compl
 We quickly pivoted and tried to do many different things to try and get better results. The first decision we made was to scale down the project, and focus only on song choruses. Then we tried performing an STFT on our wave file, then using a similar frequency change algorithm but got poor results. We also tried using all of the chromagram information, rather than finding the highest value but that didn't work well. Finally we tried pattern matching waveforms with cross-correlation instead of cosine but also got subpar results. Through this trial and error we got our final approach of extracing the notes from the chromagram, creating waveforms, and calculating the cosine distance. 
 
 ### Results
+Once we began testing our final approach we got somewhat mixed results. First off, we discovered that songs with heavy bass or lack of clear melody (mostly hip hop songs) didn't perform well using this approach. On the other hand, songs that have very defined melodies and where the singer hits some high notes performed very well. In the chart below, we show off 7 songs that we tested. A song's rank is determined by our matching algorith, with a rank of 1 meaning that it's the predicted best match, and with 50 meaning it's the predicted worst match. For human classification, we wanted to see if a human listener could identify the correct song after listening to the hums we had recorded. The chart shows off 5 songs that performed pretty well (where the correct song was predicted to be in the top 10-15 matches), and 2 songs (hip hop ones) that performed poorly. This is just 7 out of the 50 songs we had in our database. But overall we found that the success of our algorithm heavily relied on the main song's chorus. Songs with a lot of instrumental interference (guitars, bass, etc.) didn't perform too well. We debated using REPET to seperate vocals and instruments, but realized that the iconic choruses of some songs included instruments that users would likely hum (Sweet Caroline being a notable example). Overall, we think our query-by-humming system works decently. But a lot more fine tuning is needed for our system to perform super well with any song that's fed into it.
 
+![image](results.png)
 
 ### Image
 ![image](AmericanBoy.png)
@@ -30,23 +32,23 @@ In this graph for the song American Boy we can see the two waveforms we've creat
 
 Here are some humming samples that worked well, along with their respective chorus
 
-[Call Me Maybe Hum](/Hum/CallMeMaybeHum.wav)
+[Call Me Maybe Hum](https://drive.google.com/file/d/1M-oC6E-_hhZWQT3fqLF8SmwMYXbM4r1R/view?usp=sharing)
 
-[Call Me Maybe Chorus](/Chorus/CallMeMaybeChorus.wav)
+[Call Me Maybe Chorus](https://drive.google.com/file/d/1qZ1D-FjgmPoyStMHrKRmnYlkPEwiLYM5/view?usp=sharing)
 
 
-[American Boy Hum](/Hum/AmericanBoyHum.wav)
+[American Boy Hum](https://drive.google.com/file/d/1q8F8b6z8zB8Po5ff8JOIXFdOB0edkM67/view?usp=sharing)
 
-[American Boy Chorus](/Chorus/AmericanBoyChorus.wav)
+[American Boy Chorus](https://drive.google.com/file/d/1Fa-16J_riiKL9YifF3AinvV8NP5Yxoif/view?usp=sharing)
 
 
 Here are some humming samples that didn't work well, which we mainly found to be hip hop songs
 
-[Congratulations Hum](/Hum/CongratulationsHum.wav)
+[Congratulations Hum](https://drive.google.com/file/d/1iJOR218XuG43Iu7ZD1cldOci57-B8bsO/view?usp=sharing)
 
-[Congratulations Chorus](/Chorus/CongratulationsChorus.wav)
+[Congratulations Chorus](https://drive.google.com/file/d/1ckHFmTTaUXp_XoJBxhd7LKwWt6e96tee/view?usp=sharing)
 
 
-[Bodak Yellow Hum](/Hum/BodakYellowHum.wav)
+[Bodak Yellow Hum](https://drive.google.com/file/d/1H3tleen2fNeJmvdqKq-mlC4sO76qtntx/view?usp=sharing)
 
-[Bodak Yellow Chorus](/Chorus/BodakYellowChorus.wav)
+[Bodak Yellow Chorus](https://drive.google.com/file/d/1Zwvy-3Vnm_hABzPX6L8qUgbib0SK0rSW/view?usp=sharing)
